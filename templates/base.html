@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="top-bar">
+        <h1 id="title">A simple Python sample for <span class="sage-green">Sage</span> Business Cloud Accounting</h1>
+    </div>
+    <div class="nav-bar">
+        <ul class="nav-bar-ul">
+            <li class="nav-bar-li"><a href="{{ url_for('welcome') }}">Home</a></li>
+            <li class="nav-bar-li"><a href="{{ url_for('get_businesses') }}">Businesses</a></li>
+            <li class="nav-bar-li"><a href="{{ url_for('get_contacts', page=1) }}">Contacts</a></li>
+            <li class="nav-bar-li"><a href="{{ url_for('create_contact') }}">Create a Contact</a></li>
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

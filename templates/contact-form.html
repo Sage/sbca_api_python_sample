@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+<h2>Make a POST request</h2>
+<p>
+    Complete the form below and click the submit button to make a POST request to the contacts endpoint, creating a contact.
+    <p>
+        <h3>Contact details</h3>    
+
+        <form method="POST" name="contact-post-form" action="{{ url_for('contact_post') }}">
+            <input type="text" id="name" name="name" placeholder="Contact name..">
+            <select class="dropdown" name="contact_type_id">
+                <option value=" " disabled selected>Select a contact type..</option>
+                <option value="CUSTOMER">Customer</option>
+                <option value="VENDOR">Supplier/Vendor</option>
+            </select>
+            <!-- <input type="text" id="contact_type_id" name="contact_type_id" placeholder="Specify contact type id: CUSTOMER or VENDOR..">-->
+            <input type="text" id="ref" name="ref" placeholder="Contact reference..">
+            <textarea name="notes" placeholder="Add any notes here.."></textarea>
+
+            <h3>Main address</h3>
+
+            <input type="text" id="address_line_1" name="address_line_1" placeholder="Address line 1..">
+            <input type="text" id="address_line_2" name="address_line_2" placeholder="Address line 2..">
+            <input type="text" id="city" name="city" placeholder="City..">
+            <input type="text" id="region" name="region" placeholder="Region..">
+            <input type="text" id="postal_code" name="postal_code" placeholder="Postal code..">
+
+          
+            <button class="button" role="button" type="submit" class="btn btn-default">Go</button>
+          </form>
+        </p>  
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+    <h2>Contact: {{ contact.name }}</h2>
+
+    <div class="btn-group">
+        <form>
+            <form method="GET">
+                <button class="button" type="button"
+                    onclick="window.location.href='{{ url_for( 'get_contacts', page=1) }}';">Get Contacts</button>
+            </form>
+    </div>
+    <div>
+        <p>Name: {{ contact.name }}</p>
+        <p>Type: {{ contact.contact_types[0].displayed_as }}</p>
+        <p>Reference: {{ contact.reference }}</p>
+        <p>Notes: {{ contact.notes }}</p>
+
+        <h3> Main Address </h3>
+        <p>{{ contact.main_address['address_line_1'] }}</p>
+        <p>{{ contact.main_address['address_line_2'] }}</p>
+        <p>{{ contact.main_address['city'] }}</p>
+        <p>{{ contact.main_address['region'] }}</p>
+        <p>{{ contact.main_address['postal_code'] }}</p>
+    </div>
+
+</div>
+{% endblock %}

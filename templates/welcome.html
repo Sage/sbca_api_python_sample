@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<div class="text-area">
+<p>
+    This is a sample application designed to show you one method of using Python and Flask
+    to work with the <em><b>Sage Business Cloud Accounting API (v3.1)</b></em>.
+</p>
+<p>
+    We cover a method of authenticating via OAUTH2.0 and our Sage ID, refreshing the token,
+    making a simple GET request, and POST to create a contact.
+</p>
+<em>For more details and support head over to our
+    <a href="https://developer.sage.com/accounting">developer portal</a>.</em>
+</p>
+</div>
+<div class="page-body">
+<h2>Initiate authentication</h2>
+<p>
+    Click the button below to begin authentication. Ensure you sign in with the email address
+    and password you access an SBCA business with.
+    <p>
+    <b>{{ text }}</b>
+    <b>{{ error }}</b>
+        <form method="GET">
+            <button class="button" role="button" type="button" onclick="window.location.href='{{ url_for( 'get_code') }}';">Authenticate</button>
+        </form>
+    </div>
+{% endblock %}

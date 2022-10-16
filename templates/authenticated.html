@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+<h2>Successfully authenticated - Choose your business</h2>
+<p>
+    Please select the business you would like to work with from the selection below.
+    <p>
+
+        <form method="POST" action="{{ url_for('select_business') }}">
+            <select class="dropdown" name="business-select">
+              <option value="0" >Choose your business:</option>  
+              {% for business in businesses %}
+              <option value="{{ business.id }}">{{ business.displayed_as }}</option>
+              {% endfor %}
+            </select>
+          
+            <button class="button" role="button"" type="submit" class="btn btn-default">Go</button>
+          </form>
+        </div>
+{% endblock %}
+

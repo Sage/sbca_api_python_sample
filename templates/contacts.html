@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<div class="page-body">
+    <h2>Make a GET request</h2>
+    <p> Click the button below to make a GET request to the contacts endpoint.
+    <p>
+    <div class="btn-group">
+      <form>
+        <form method="GET">
+          <button class="button" type="button" onclick="window.location.href='{{ url_for( 'get_contacts', page=page) }}';">Get Contacts</button>
+          <button class="button" type="button" onclick="window.location.href='{{ url_for( 'create_contact') }}';">Create a Contact</button>
+        </form>
+    </div>
+    <div>
+    {% if contacts is defined %}
+    <p>
+        <hr class="hr">
+    </p>
+    <p>
+    <table>
+    <tr>
+        <th>Contact name</th>
+        <th>Contact id</th>
+    </tr>
+    {% for contact in contacts %}
+    <tr>
+        <td>{{ contact.displayed_as }}</td>
+        <td>{{ contact.id }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    </p>
+    <div class="prev-next-btns">
+        <form>
+            <form method="GET">
+                {% if session.get("token_expiry_time") != None %}
+                {% if back == False %}
+                <button class="button" type="button"
+                    style="-webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);">Prev page</button>
+                {% else %}
+                <button class="button" type="button"
+                    onclick="window.location.href='{{ url_for( 'get_contacts', page=page - 1) }}';">Prev
+                    page</button>
+                {% endif %}
+
+                {% if next == False %}
+                <button class="button" type="button"
+                    style="-webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);">Next page</button>
+                {% else %}
+                <button class="button" type="button"
+                    onclick="window.location.href='{{ url_for( 'get_contacts', page=page + 1) }}';">Next
+                    page</button>
+                {% endif %}
+                {% endif %}
+        </form>
+    </div>
+    </div>
+    {% else %}
+    {% endif %}
+    </div>
+{% endblock %}
