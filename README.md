@@ -53,6 +53,6 @@ This sample is only one of many ways to work with our API, and so we welcome fee
 
 ## Licence
 
-Licensed under the [Apache-2.0 licence](LICENSE).
+Licensed under the [Apache-2.0 licence](https://github.com/Sage/sbca_api_python_sample/blob/master/LICENCE).
 
 Copyright (c) 2018-2022 Sage Group Plc. All rights reserved.
