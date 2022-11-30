@@ -18,21 +18,32 @@ Prior to using this sample application there are a few things you need to ensure
 
 ## Configuration
 
- * Install the latest version of [python3](https://www.python.org/downloads/).
- * Create and activate a virtual environment - [offical Python docs](https://docs.python.org/3/library/venv.html).
- * Ensure pip is installed and using the following command in your virtual environment install all required packages:
+* Install the latest version of [python3](https://www.python.org/downloads/).
+* Create and activate a virtual environment - [offical Python docs](https://docs.python.org/3/library/venv.html).
+* Ensure pip is installed and using the following command in your virtual environment install all required packages:
 
-```
+```terminal
 pip install -r requirements.txt
 ```
 
-* Update the config.py with your registered application credentials (Client ID, Client Secret and Redirect URL).
+* Update the config.py with your registered application credentials (Client ID, Client Secret and Redirect URL), and set or generate a new (16-24 character) Flask session key, updating the details in the configuration.
+
+You can use the os package via os.urandom(24) (passing in the number of characters you require)
+For example in a python terminal:
+
+```terminal
+>>> import os
+>>> os.urandom(24)
+>>> b'"\xf7\xb5\..........\xa5\x0e'
+```
+
+Once your session key and credentials are set in the config.py, setup is complete.
 
 ## Usage
 
 Start the sample app using:
 
-```
+```terminal
 python -m flask run
 ```
 

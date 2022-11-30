@@ -1,10 +1,10 @@
 from flask import Flask, render_template, redirect, request, redirect, session
-import config, auth, requests, os, json
+import config, auth, requests, json
 
 app = Flask(__name__)
 
 #Set secret key for encrypting the session - this uses os to retrieve a set environment variable. 
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+app.config["SECRET_KEY"] = config.flask_secret
 
 
 
