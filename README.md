@@ -53,6 +53,6 @@ This sample is only one of many ways to work with our API, and so we welcome fee
 
 ## Licence
 
-Carbon is licensed under the [Apache-2.0 licence](LICENSE).
+Licensed under the [Apache-2.0 licence](LICENSE).
 
 Copyright (c) 2018-2022 Sage Group Plc. All rights reserved.
