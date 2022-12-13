@@ -47,9 +47,11 @@ Start the sample app using:
 python -m flask run
 ```
 
-## Contributing
+## Feedback
 
 This sample is only one of many ways to work with our API, and so we welcome feedback. Please let us know on our [developer community](https://developer-community.sage.com/forum/4-sage-business-cloud-accounting/) your thoughts, and get involved in the discussion.
+
+## Copyright
 
 © 2022 The Sage Group plc or its licensors. All rights reserved.
 
