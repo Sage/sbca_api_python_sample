@@ -51,11 +51,12 @@ python -m flask run
 
 This sample is only one of many ways to work with our API, and so we welcome feedback. Please let us know on our [developer community](https://developer-community.sage.com/forum/4-sage-business-cloud-accounting/) your thoughts, and get involved in the discussion.
 
-## Copyright
-
-© 2022 The Sage Group plc or its licensors. All rights reserved.
-
 ## Licence
 
 Licensed under the [Apache-2.0 licence](https://github.com/Sage/sbca_api_python_sample/blob/master/LICENCE).
+
+
+## Copyright
+
+© 2022 The Sage Group plc or its licensors. All rights reserved.
 
